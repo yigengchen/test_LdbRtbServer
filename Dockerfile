@@ -1,6 +1,6 @@
 FROM centos:7
 #FROM gcc:4.8
-RUN yum -y update && yum -y install openssl openssl-devel automake autoconf libtool make cmake automake autoconf gcc gcc-c++ && yum clean all
+RUN yum -y install openssl openssl-devel automake autoconf libtool make cmake automake autoconf gcc gcc-c++ && yum clean all
 RUN mkdir -p /src/myapp
 ENV TIME_ZONE=Asia/Shanghai
 RUN ln -snf /usr/share/zoneinfo/$TIME_ZONE /etc/localtime && echo $TIME_ZONE > /etc/timezone
